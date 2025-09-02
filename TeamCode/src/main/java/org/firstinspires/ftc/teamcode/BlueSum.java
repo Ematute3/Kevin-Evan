@@ -87,7 +87,7 @@ public class BlueSum extends LinearOpMode {
 
         waitForStart();
 
-        while(opModeIsActive()){
+        while(opModeIsActive()) {
 
             // --- DRIVE (gamepad1) ---
             double y = gamepad1.left_stick_y; // Forward/backward (reversed for correct direction)
@@ -125,7 +125,7 @@ public class BlueSum extends LinearOpMode {
             // --- OUTTAKE CLAW  ---
             if (gamepad2.dpad_left) {
                 outtakeClaw.setPosition(OUTTAKE_CLAW_OPEN);
-            }else if (gamepad2.dpad_right) {
+            } else if (gamepad2.dpad_right) {
                 outtakeClaw.setPosition(OUTTAKE_CLAW_CLOSED);
             }
             // --- OUTTAKE FLIP (X = up, Y = down) ---
@@ -187,10 +187,7 @@ public class BlueSum extends LinearOpMode {
             telemetry.addData("Outtake", "Claw %.2f  Flip %.2f  Pivot %.2f",
                     outtakeClaw.getPosition(), outtakeFlip.getPosition(), outtakePivot.getPosition());
             telemetry.addData("Intake", "LArm %.2f  RArm %.2f",
-                     leftIntakeServo.getPosition(), rightIntakeServo.getPosition());
-            telemetry.addData("Linkage", "L %.2f  R %.2f",
-                    leftLinkageServo.getPosition(), rightLinkageServo.getPosition());
-            telemetry.update();
+                    leftIntakeServo.getPosition(), rightIntakeServo.getPosition());
         }
     }
 }
