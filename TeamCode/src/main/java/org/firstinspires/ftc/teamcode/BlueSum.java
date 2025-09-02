@@ -5,8 +5,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.hardware.rev.RevSmartServo;
-
 @TeleOp(name = "EvanCode")
 public class BlueSum extends LinearOpMode {
 
@@ -42,7 +40,7 @@ public class BlueSum extends LinearOpMode {
         DcMotor liftRight  = hardwareMap.get(DcMotor.class,"liftMotor2");
 
         // --- SERVOS
-        RevSmartServo axon = hardwareMap.get(Servo.class,"rightLinkageServo");
+        Servo rightLinkageServo= hardwareMap.get(Servo.class,"rightLinkageServo");
         Servo leftLinkageServo  = hardwareMap.get(Servo.class,"leftLinkageServo");
 
         //Servo intakeServo       = hardwareMap.get(Servo.class,"intakeServo");// main deploy/retract
