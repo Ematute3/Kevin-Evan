@@ -23,8 +23,7 @@ public class BlueSum extends LinearOpMode {
     private static final double INTAKE_RETRACT      = -1.00; // main intake up
     private static final double INTAKE_ARM_IN       = 0.15; // side arms tucked
     private static final double INTAKE_ARM_OUT      = 0.85; // side arms out
-    private static final double INTAKE_FRONT_INTAKE = 1.00;
-    private static final double INTAKE_FRONT_OUTAKE = -1.00;
+
 
 
     @Override
